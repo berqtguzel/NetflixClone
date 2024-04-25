@@ -1,0 +1,46 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo-img{
+    width: 13em;
+}
+.login-button{
+    margin-left: 25px;
+    background-color: red;
+    border: 0;
+    width: 7em;
+    height: 2.5em;
+    border-radius: 5px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+.login-button:hover{
+    background-color: #E50815;
+}
+.language-select{
+    border: 0;
+    width: 7em;
+    height: 2.5em;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 18px;
+    color: white;
+    text-decoration: double;
+    z-index: 0;
+    font-weight: 800;
+}
+.language-icon{
+    color: white;
+    position: relative;
+    left: 19px;
+    top: 4px;
+    z-index: 1;
+
+}
+.navbar-right{
+  display: flex;
+  
+}
