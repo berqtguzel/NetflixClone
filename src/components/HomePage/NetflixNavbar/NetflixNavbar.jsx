@@ -1,14 +1,12 @@
 import React from "react";
-import "../NetflixNavbar/NetflixNavbar.css";
-import logo from "../../assets/Netflix_Logo_RGB.png";
+import "./NetflixNavbar.css";
 import { IoLanguage } from "react-icons/io5";
+import NetflixLogo from "../NetflixLogo/NetflixLogo";
 const NetflixNavbar = () => {
   return (
     <div className="header">
       <div className="navbar">
-        <div className="logo">
-          <img className="logo-img" src={logo} alt="" />
-        </div>
+        <NetflixLogo />
         <div className="navbar-right">
           <div className="language-container">
             <IoLanguage className="language-icon" />
@@ -17,7 +15,9 @@ const NetflixNavbar = () => {
               <option value="">English</option>
             </select>
           </div>
-          <button className="login-button">Oturum Aç</button>
+          <a href="/Login" className="login-button">
+            Oturum Aç
+          </a>
         </div>
       </div>
     </div>

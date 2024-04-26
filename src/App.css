@@ -2,7 +2,24 @@
   background-image: url("../src/assets/background.jpg");
   width: 100%;
   height: 56.5em;
-  -webkit-box-shadow: inset 0px 0px 100px 63px rgba(1, 1, 1, 1);
+}
+.home{
+  backdrop-filter: brightness(40%);
+  -webkit-backdrop-filter: brightness(40%);
+  width: 100%;
+  height: 100%;
+    -webkit-box-shadow: inset 0px 0px 100px 63px rgba(1, 1, 1, 1);
   -moz-box-shadow: inset 0px 0px 100px 63px rgba(1, 1, 1, 1);
   box-shadow: inset 0px 0px 100px 63px rgba(1, 1, 1, 1);
+}
+.login-page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+   backdrop-filter: brightness(50%);
+  -webkit-backdrop-filter: brightness(50%); 
+}
+.logo{
+  padding-left:11em;
 }

@@ -3,9 +3,7 @@
     justify-content: space-around;
     align-items: center;
 }
-.logo-img{
-    width: 13em;
-}
+
 .login-button{
     margin-left: 25px;
     background-color: red;
@@ -16,6 +14,10 @@
     color: white;
     font-weight: 800;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
 }
 .login-button:hover{
     background-color: #E50815;
@@ -38,7 +40,6 @@
     left: 19px;
     top: 4px;
     z-index: 1;
-
 }
 .navbar-right{
   display: flex;

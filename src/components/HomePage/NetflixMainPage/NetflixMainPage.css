@@ -22,11 +22,13 @@
     padding-left: 10px;
     color: white;
     height: 4em;
+    font-weight: 1000;
     
 }
 .input-container{
     display: flex;
     flex-direction: row;
+    margin-top: 15px;
 }
 .mail-button{
     margin-left: 5px;
@@ -37,7 +39,7 @@
     font-weight: 1000;
     font-size: 25px;
     width: 6em;
-  padding-right: 25px;
+    padding-right: 25px;
 }
 .mail-button:hover{
     background-color: #E50815;

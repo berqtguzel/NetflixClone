@@ -1,12 +1,16 @@
 import './App.css';
-import NetflixMainPage from './components/NetflixMainPage/NetflixMainPage';
-import NetflixNavbar from './components/NetflixNavbar/NetflixNavbar';
-
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import HomePage from './pages/HomePage/HomePage';
+import LoginPage from './pages/Login/LoginPage';
 function App() {
   return (
     <div className="app">
-     <NetflixNavbar/>
-     <NetflixMainPage/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage/>} ></Route>
+        <Route path='/Login' element={<LoginPage/>} ></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

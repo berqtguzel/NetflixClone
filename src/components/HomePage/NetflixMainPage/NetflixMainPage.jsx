@@ -1,5 +1,5 @@
 import React from "react";
-import "../NetflixMainPage/NetflixMainPage.css";
+import "./NetflixMainPage.css";
 import { IoIosArrowForward } from "react-icons/io";
 
 const NetflixMainPage = () => {
@@ -11,7 +11,7 @@ const NetflixMainPage = () => {
       <h3 className="page-text">
         İstediğiniz yerde izleyin. İstediğiniz zaman iptal edin.
       </h3>
-      <h3 className="page-text">
+      <h3 className="page-text ready-to-watch">
         İzlemeye hazır mısınız? Üye olmak ya da hesabınıza tekrar ulaşmak için
         tek yapmanız gereken e-posta adresinizi girmek
       </h3>
