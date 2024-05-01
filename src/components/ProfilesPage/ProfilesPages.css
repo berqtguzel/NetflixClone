@@ -1,0 +1,53 @@
+.profile{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+}
+
+.profiles-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.profile-img{
+    max-width: 150px;
+    
+}
+.profile-img:hover{
+    border: 2px white solid;
+
+}
+.profile-name{
+    color: rgb(162, 162, 162);
+}
+.profiles{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.whos-watching{
+    color: white;
+    font-size: 60px;
+}
+.profile-button{
+    border: 2px rgb(162, 162, 162) solid;
+    background-color: #141414;
+    color: rgb(162, 162, 162);
+    padding: 13px 20px 13px 20px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 8em;
+    letter-spacing: 2px;
+}
+.profile-button:hover{
+    border: 2px white solid;
+    color: white;
+}

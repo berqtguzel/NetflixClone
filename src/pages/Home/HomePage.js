@@ -4,9 +4,11 @@ import NetflixNavbar from '../../components/HomePage/NetflixNavbar/NetflixNavbar
 
 const HomePage = () => {
   return (
-    <div className='home'>
+    <div className='home-page'>
+        <div className='home'>
         <NetflixNavbar/>
         <NetflixMainPage/>
+        </div>
     </div>
   )
 }

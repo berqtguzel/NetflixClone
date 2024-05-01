@@ -1,55 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../NetflixLoginInput/NetflixLoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleAuthProvider } from "firebase/auth";
-import { auth } from "./firebase-config";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { auth, provider } from "./config.js";
+import { signInWithPopup } from "firebase/auth";
 
-const clientID =
-  "1017272210067-onec062c9o8dqd7o0e5jog6c3ugcf19r.apps.googleusercontent.com";
 const NetflixLoginInput = () => {
+  const [value, setValue] = useState("");
   const navigate = useNavigate();
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyCUHkwL3VO4Dbr76u1tdt-zHhxre-Tb4lQ",
-    authDomain: "netflix-clone-50eb5.firebaseapp.com",
-    projectId: "netflix-clone-50eb5",
-    storageBucket: "netflix-clone-50eb5.appspot.com",
-    messagingSenderId: "1092069968328",
-    appId: "1:1092069968328:web:516bf145c651c08b9798fd",
-    measurementId: "G-56NRJJ19EG",
+  const handleClick = () => {
+    signInWithPopup(auth, provider).then((data) => {
+      setValue(data.user.email);
+      localStorage.setItem("email", data.user.email);
+      navigate("/browse");
+    });
   };
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  const loginWithGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        // Oturum açma başarılı
-        const user = result.user;
-        console.log("Google hesabıyla giriş yapıldı:", user);
-      })
-      .catch((error) => {
-        // Hata oluştu
-        console.error("Google hesabıyla giriş yaparken hata oluştu:", error);
-      });
-  };
-
-  const logout = () => {
-    auth
-      .signOut()
-      .then(() => {
-        // Oturum kapatma başarılı
-        console.log("Oturum kapatıldı");
-      })
-      .catch((error) => {
-        // Hata oluştu
-        console.error("Oturum kapatılırken hata oluştu:", error);
-      });
-  };
+  useEffect(() => {
+    setValue(localStorage.getItem("email"));
+  });
 
   return (
     <div className="login-page-container">
@@ -67,6 +34,8 @@ const NetflixLoginInput = () => {
           id="password"
           placeholder="Parola"
         />
+        <button onClick={handleClick}>Tıkla</button>
+
         <Link className="login-page-button" href="#">
           Oturum Aç
         </Link>
