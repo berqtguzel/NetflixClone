@@ -1,0 +1,173 @@
+.logo-img{
+    width: 7em;
+    margin-right: 20px;
+  }
+.top-navbar{
+    background: transparent;
+    padding-top: 4px;
+    padding-left: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+.nav-link{
+   margin-left: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.first-nav{
+    display: flex;
+}
+.secondary-nav{
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon{
+    font-size: 25px;
+    color: black;
+}
+.bell-icon{
+    font-size: 25px;
+    margin-left:30px;
+    color: white;
+}
+.nav-img{
+    margin-left:30px;
+    width: 30px;
+}
+.main-img{
+    position: relative;
+    bottom: 120px;
+    z-index: 0;
+    width: 100%;
+    height: 50em;
+}
+.search-container{
+    display: flex;
+    cursor: pointer;
+    background-color:transparent;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon{
+    color: white;
+    font-size: 20px;
+}
+
+.search-container:hover .search-input{
+    width: 200px;
+    background-color:transparent;
+     border: none;
+     outline: none;
+     color: white;
+}
+.search-container:hover{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.703);
+    border:2px solid white;
+
+}
+.search-input{
+    border: none;
+    width: 0;
+    transition: 0.8s;
+    background-color: transparent;
+
+}
+.nav-profile-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+}
+.profile{
+    color: white;
+}
+.container{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.903);
+    border-radius: 2px solid gray;
+    width: 170px;
+    height: 24em;
+    left: 92em;
+    z-index: 1;
+    top: 85px;
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;
+   padding: 0px;
+}
+.profile-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.profile-container:hover .profile-icon{
+    transition-duration: 0.5s;
+    transform: rotate(180deg) ;
+}
+.profile-icon{
+    color: white;
+    height: 30px;
+    transition-duration: 0.5s;
+}
+.profile-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.profile{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: 9px;
+    justify-content: center;
+    align-items: center;
+
+}
+.profile-name{
+    color: white;
+}
+.profile-management{
+    display: flex;
+    align-items: center;
+}
+.profile-management-icon{
+    color: gray;
+    font-size: 25px;
+    padding-right: 4px;
+    padding-left: 9px;
+}
+.profile-management-text{
+    color: white;
+    width: 120px;
+    font-size: 13px;
+}
+.logout-link a {
+   color:white;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .logout-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+   height: 200px;
+   margin-left: 9px;
+  }
+  .logout-link a:hover {
+    text-decoration: underline;
+  } 
+  hr{
+    background-color: rgb(79, 79, 79);
+    width: 168px;
+  }

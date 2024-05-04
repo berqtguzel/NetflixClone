@@ -1,6 +1,6 @@
 import React from 'react'
 import NetflixMainPage from '../../components/HomePage/NetflixMainPage/NetflixMainPage'
-import NetflixNavbar from '../../components/HomePage/NetflixNavbar/NetflixNavbar'
+import NetflixNavbar from '../../components/Navbars/NetflixNavbar/NetflixNavbar'
 
 const HomePage = () => {
   return (

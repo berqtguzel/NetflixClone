@@ -1,7 +1,7 @@
 import React from "react";
 import "./NetflixNavbar.css";
 import { IoLanguage } from "react-icons/io5";
-import NetflixLogo from "../NetflixLogo/NetflixLogo";
+import NetflixLogo from "../../HomePage/NetflixLogo/NetflixLogo";
 const NetflixNavbar = () => {
   return (
     <div className="header">

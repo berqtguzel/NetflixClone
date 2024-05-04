@@ -11,7 +11,7 @@ const NetflixLoginInput = () => {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email);
       localStorage.setItem("email", data.user.email);
-      navigate("/browse");
+      navigate("/profile");
     });
   };
   useEffect(() => {
@@ -34,7 +34,9 @@ const NetflixLoginInput = () => {
           id="password"
           placeholder="Parola"
         />
-        <button onClick={handleClick}>Tıkla</button>
+        <button className="google-sign" onClick={handleClick}>
+          Google ile Giriş Yap
+        </button>
 
         <Link className="login-page-button" href="#">
           Oturum Aç
