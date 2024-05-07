@@ -1,6 +1,6 @@
 import { MdPlayArrow } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
-const MovieContainer = ({ image, IMAGE_BASE_URL }) => {
+const MovieContainer = ({ image, IMAGE_BASE_URL, navigateVideo, navigate }) => {
   return (
     <div>
       {" "}
@@ -12,7 +12,7 @@ const MovieContainer = ({ image, IMAGE_BASE_URL }) => {
               src={`${IMAGE_BASE_URL}/w500/${image.backdrop_path}`}
               alt={image.title}
             />
-            <span className="movies-start">
+            <span className="movies-start" onClick={navigateVideo}>
               <MdPlayArrow className="start-icon" />
               Oynat
             </span>

@@ -29,7 +29,7 @@ const ProfilsPage = () => {
               <img
                 onClick={goToMain}
                 className="profile-img"
-                src={require(`../../assets/${obj.imgSrc}.png`)}
+                src={require(`../../assets/images/${obj.imgSrc}.png`)}
                 alt=""
               />
               <h3 className="profile-name">{obj.name}</h3>

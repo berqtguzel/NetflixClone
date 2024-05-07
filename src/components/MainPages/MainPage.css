@@ -37,6 +37,10 @@ body{
     border-radius: 6px;
     font-weight: 700;
 }
+.movies-start:hover{
+    cursor: pointer;
+    background-color: rgb(193, 193, 193);
+}
 .start-icon{
     font-size: 40px;
    position: absolute;
@@ -56,11 +60,37 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 .info-icon{
     font-size: 40px;
    position: absolute;
    right: 180px;
+}
+.slider-img:hover{
+    border: 2px solid white;
+    cursor: pointer;
+}
+.slider-video{
+    position: absolute;
+    top: 60em;
+    z-index: 1;
+    width: 61em;
+    border: 5px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+}
+.slider-video-text{
+  cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.slider-video-text:hover{
+text-decoration: underline;
+
 }

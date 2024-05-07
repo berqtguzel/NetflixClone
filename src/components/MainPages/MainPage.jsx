@@ -4,6 +4,7 @@ import axios from "axios";
 import MovieContainer from "./MovieContainer/MovieContainer";
 import Sliders from "./MovieSlider/Sliders";
 import MainNavbar from "../Navbars/MainNavBar/MainNavbar";
+import { useNavigate } from "react-router-dom";
 const API_KEY = "b802df17cb0cfe28ed7ce825a9db709d";
 const BASE_URL = "https://api.themoviedb.org/3/discover/movie";
 const TOP_BASE_URL = "https://api.themoviedb.org/3/movie/top_rated";
@@ -15,7 +16,11 @@ const MainPage = () => {
   const [image, setImage] = useState([]);
   const [series, setSeries] = useState([]);
   const [page, setPage] = useState(1);
+  const navigate = useNavigate();
 
+  const navigateVideo = () => {
+    navigate("/video");
+  };
   useEffect(() => {
     const fetchImage = async () => {
       try {
@@ -65,15 +70,18 @@ const MainPage = () => {
     fetchSeries();
   }, [page]);
 
-  const loadMore = () => {
-    setPage((prevPage) => prevPage + 1);
-  };
-
   return (
     <div className="movie-page">
       <MainNavbar />
-      <MovieContainer image={image} IMAGE_BASE_URL={IMAGE_BASE_URL} />
+      <MovieContainer
+        navigateVideo={navigateVideo}
+        navigate={navigate}
+        image={image}
+        IMAGE_BASE_URL={IMAGE_BASE_URL}
+      />
       <Sliders
+        navigateVideo={navigateVideo}
+        navigate={navigate}
         movies={movies}
         series={series}
         POSTER_SIZE={POSTER_SIZE}

@@ -1,17 +1,17 @@
 import { useState } from "react";
-import logo from "../../../assets/Netflix_Logo_RGB.png";
+import logo from "../../../assets/images/Netflix_Logo_RGB.png";
 import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
-import profile from "../../../assets/profile-1.png";
+import profile from "../../../assets/images/profile-1.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { PiPencilDuotone } from "react-icons/pi";
 import { VscAccount } from "react-icons/vsc";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { MdOutlineManageAccounts } from "react-icons/md";
 
-import profile1 from "../../../assets/profile-2.png";
-import profile2 from "../../../assets/profile-3.png";
-import profile3 from "../../../assets/profile-4.png";
+import profile1 from "../../../assets/images/profile-2.png";
+import profile2 from "../../../assets/images/profile-3.png";
+import profile3 from "../../../assets/images/profile-4.png";
 
 import "./MainNavbar.css";
 const navlinks = [
@@ -45,7 +45,7 @@ const MainNavbar = () => {
 
   const googleLogout = () => {
     localStorage.clear();
-    console.log("hesabınızdan çıkış yapıldı");
+    console.log(googleLogout, "hesabınızdan çıkış yapıldı");
   };
 
   return (
